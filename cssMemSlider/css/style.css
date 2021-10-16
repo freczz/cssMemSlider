@@ -1,4 +1,3 @@
-/* "feat: add wrapper (Sat, Sep 16, 2021, 15:34)" */
 *{
    margin: 0;
    padding: 0;
@@ -32,42 +31,66 @@ h1{
    padding: 3vh 0px 0px 0px;
    border-radius: 2vh;
 }
-.items {
+.slides {
    width: 100%;
    height: 70vh;
    display: flex;
-
-   position: relative;
-   right: 00%;
-}
-.items div{
-   flex: 0 0 100%;
    background: #222;
 }
-figure{
-   height: 100%;
-   width: 100%;
+input{
+   display: none;
 }
-img{
+.image{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   transition: all 0.6s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+.image div{
+   flex: 0 0 100%;
+}
+.image img{
    height: 70vh;
    width: 100%;
    object-fit: contain;
 }
-figcaption{
-   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-   color: #c9c9c9;
-   font-size: 2vh;
-   margin: 3vh 0px 0px 2vh;
-}
-.dots {
+.active{
    display: flex;
    justify-content: end;
-   margin: 4vh 2vh 0px 0px;
+   margin: 3.5vh 2vh 0px 0vh;
 }
-.dot {
-   height: 1vw;
+.active label{
    width: 1vw;
-   background: #f17171;
-   border-radius: 50%;
-   margin: 0 0.5vh;
+   height: 1vw;
+   border-radius: 50%; 
+   background: #bbb;
+   border: 2px solid #bbb;
+   margin: 0vh 0vh 0px 2vh;
+   transition: all 0.3s ease 0s;
+}
+.active label:hover{
+   cursor: pointer;
+   background: #838383;
+}
+#slide1:checked ~ .slides .image{
+	margin-left: 0;
+}
+
+#slide2:checked ~ .slides .image{
+	margin-left: -100%;
+}
+
+#slide3:checked ~ .slides .image{
+	margin-left: -200%;
+}
+
+#slide4:checked ~ .slides .image{
+	margin-left: -300%;
+}
+#slide1:checked ~ .active label:nth-child(1),
+#slide2:checked ~ .active label:nth-child(2),
+#slide3:checked ~ .active label:nth-child(3),
+#slide4:checked ~ .active label:nth-child(4),
+#slide5:checked ~ .active label:nth-child(5){
+	background: transparent;
 }
