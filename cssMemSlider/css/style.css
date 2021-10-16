@@ -67,21 +67,27 @@ input{display: none}
 .active{
    display: flex;
    justify-content: end;
-   margin: 3.5vh 4vh 0px 0vh;
+   margin: 2.5vh 4vh 0px 0vh;
 }
 .active label{
+   width: 4vh;
+   height: 4vh;
+   border-radius: 20%;
+   background: transparent;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.active div{
    width: 2vh;
    height: 2vh;
    border-radius: 50%; 
    background: #bbb;
    border: 2px solid #bbb;
-   margin: 0vh 0vh 0px 2vh;
    transition: all 0.3s ease 0s;
 }
-.active label:hover{
-   cursor: pointer;
-   background: #838383;
-}
+.active label:hover{cursor: pointer}
+.active label:hover div{background: #838383}
 #slide1:checked ~ .slides .image{margin-left: 0}
 #slide1:checked ~ .slides .caption{margin-left: 0}
 #slide2:checked ~ .slides .image{margin-left: -100%}
@@ -91,32 +97,25 @@ input{display: none}
 #slide4:checked ~ .slides .image{margin-left: -300%}
 #slide4:checked ~ .slides .caption{margin-left: calc(-300% - 12vh)}
 
-#slide1:checked ~ .active label:nth-child(1),
-#slide2:checked ~ .active label:nth-child(2),
-#slide3:checked ~ .active label:nth-child(3),
-#slide4:checked ~ .active label:nth-child(4),
-#slide5:checked ~ .active label:nth-child(5){background: transparent}
+#slide1:checked ~ .active label:nth-child(1) div,
+#slide2:checked ~ .active label:nth-child(2) div,
+#slide3:checked ~ .active label:nth-child(3) div,
+#slide4:checked ~ .active label:nth-child(4) div,
+#slide5:checked ~ .active label:nth-child(5) div{background: transparent}
 
 @media(max-width: 768px)  {
-   .slider{
-      margin: 2vh 5vw;
-   }
-   .main{
-      height: 82vh;
-   }
-   .slides{
-      height: 65vh;
-   }
-   .image img{
-      height: 65vh;
-   }
+   .slider{margin: 2vh 5vw}
+   .main{height: 85vh}
+   .slides{height: 65vh}
+   .image img{height: 65vh}
    .active{
       justify-content: center;
+      margin-right: 0;
    }
    .caption{
       position: relative;
       text-align: center;
       right: 4vh;
-      margin-top: 9vh;
+      margin-top: 10vh;
    }
 }
