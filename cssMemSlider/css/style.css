@@ -1,0 +1,73 @@
+/* "feat: add wrapper (Sat, Sep 16, 2021, 15:34)" */
+*{
+   margin: 0;
+   padding: 0;
+}
+body{
+   width: 100%;
+   height: 100%;
+   background: #555;
+}
+.slider {
+   width: 80vw;
+   height: 90vh;
+   margin: 5vh 10vw;
+   overflow: hidden;
+
+}
+h1{
+   text-align: center;
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   color: #c9c9c9;
+   font-size: 3vh;
+   text-transform: uppercase;
+   text-decoration: underline;
+   letter-spacing: 1px;
+}
+.main {
+   background: #333;
+   width: 100%;
+   height: 80vh;
+   margin: 2vh 0px 0px 0px;
+   padding: 3vh 0px 0px 0px;
+   border-radius: 2vh;
+}
+.items {
+   width: 100%;
+   height: 70vh;
+   display: flex;
+
+   position: relative;
+   right: 00%;
+}
+.items div{
+   flex: 0 0 100%;
+   background: #222;
+}
+figure{
+   height: 100%;
+   width: 100%;
+}
+img{
+   height: 70vh;
+   width: 100%;
+   object-fit: contain;
+}
+figcaption{
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   color: #c9c9c9;
+   font-size: 2vh;
+   margin: 3vh 0px 0px 2vh;
+}
+.dots {
+   display: flex;
+   justify-content: end;
+   margin: 4vh 2vh 0px 0px;
+}
+.dot {
+   height: 1vw;
+   width: 1vw;
+   background: #f17171;
+   border-radius: 50%;
+   margin: 0 0.5vh;
+}
