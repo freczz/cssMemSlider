@@ -83,7 +83,7 @@ input{display: none}
    height: 2vh;
    border-radius: 50%; 
    background: #bbb;
-   border: 2px solid #bbb;
+   border: 0.1em solid #bbb;
    transition: all 0.3s ease 0s;
 }
 .active label:hover{cursor: pointer}
